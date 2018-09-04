@@ -1,3 +1,18 @@
+""" Package Managers
+
+" Vim Package Manager via Vim Plug
+call plug#begin()
+Plug 'itchyny/lightline.vim'
+Plug 'nightsense/snow'
+Plug 'leafgarland/typescript-vim'
+call plug#end()
+
+" Apt-vim stuff (powered by pathogen)
+execute pathogen#infect()
+call pathogen#helptags()
+
+""" Vim Core settings
+
 " Show line numbers
 :set number
 
@@ -5,21 +20,19 @@
 set tabstop=4
 set expandtab
 
-" Vim Package Manager via Vim Plug
-call plug#begin()
-Plug 'itchyny/lightline.vim'
-call plug#end()
+" Removing delay when switching modes
+set timeoutlen=1000 ttimeoutlen=0
+
+" Plugins / Packages / Addons settings
+
+" Colorscheme
+set background=dark
+colorscheme snow
 
 " Lightline settings and hacks
 set laststatus=2
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
+" Nerdtree settings
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
