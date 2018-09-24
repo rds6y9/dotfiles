@@ -18,6 +18,7 @@ call pathogen#helptags()
 
 " Set tab width to 4 spaces
 set tabstop=4
+set shiftwidth=4
 set expandtab
 
 " Removing delay when switching modes
@@ -28,6 +29,9 @@ set timeoutlen=1000 ttimeoutlen=0
 " Colorscheme
 set background=dark
 colorscheme snow
+
+" Setting background to match terminal default
+hi Normal guibg=NONE ctermbg=NONE
 
 " Lightline settings and hacks
 set laststatus=2

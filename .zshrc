@@ -106,3 +106,15 @@ export TERM=screen-256color
 # Tmux aliases
 
 alias td="tmux detach"
+
+# Python aliases
+
+alias python="python3.6"
+
+# Anaconda
+
+export PATH="/home/ryan/anaconda3/bin:$PATH"
+
+setopt PROMPT_CR
+setopt PROMPT_SP
+export PROMPT_EOL_MARK=""
